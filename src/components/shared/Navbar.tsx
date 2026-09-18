@@ -19,6 +19,7 @@ const Navbar = () => {
                 <button className="bg-[#D91B7E] text-[#FFFFFF] px-6 py-2 rounded-3xl">Sign Up</button>
             </div>
         </div>
+       <hr className="border-slate-200" />
         </>
     );
 };
