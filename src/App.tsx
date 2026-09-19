@@ -3,29 +3,40 @@ import Navbar from "./components/shared/Navbar"
 import MainLayout from "./components/Technology/MainLayout"
 import { Suspense } from "react";
 import type { Technology } from "./types/technologyType";
+import StackList from "./components/Technology/StackList";
+import Technologies from "./components/Technology/Technologies";
 
 
 
-const fetchTechnology = async ():Promise<Technology> => {
-  const res = await fetch('/data.json')
-  const data = await res.json()
+const fetchTechnology = async (): Promise<Technology[]> => {
+  const res = await fetch('/data.json');
+  const data = await res.json();
   return data;
 }
- const technologyPromise = fetchTechnology()
+const technologyPromise = fetchTechnology();
 
 
 function App() {
 
- 
   return (
     <>
       <Navbar></Navbar>
       <Banner></Banner>
+      <MainLayout></MainLayout>
       <main>
         <section className="container mx-auto my-10">
-          <Suspense fallback={<div>Laoding...</div>}>
-            <MainLayout technologyPromise ={technologyPromise}></MainLayout>
-          </Suspense>
+          <div className="grid grid-cols-4 gap-5">
+
+            <div className="col-span-3">
+              <Suspense fallback={<div>Laoding...</div>}>
+                <Technologies technologyPromise={technologyPromise}></Technologies>
+              </Suspense>
+            </div>
+            <div className="col-span-1">
+              <StackList></StackList>
+            </div>
+
+          </div>
         </section>
       </main>
 
