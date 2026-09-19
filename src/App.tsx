@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import type { Technology } from "./types/technologyType";
 import StackList from "./components/Technology/StackList";
 import Technologies from "./components/Technology/Technologies";
+import Footer from "./components/shared/Footer";
 
 
 
@@ -24,9 +25,8 @@ function App() {
       <Banner></Banner>
       <MainLayout></MainLayout>
       <main>
-        <section className="container mx-auto my-10">
+        <section className="container mx-auto my-20">
           <div className="grid grid-cols-4 gap-5">
-
             <div className="col-span-3">
               <Suspense fallback={<div>Laoding...</div>}>
                 <Technologies technologyPromise={technologyPromise}></Technologies>
@@ -35,11 +35,10 @@ function App() {
             <div className="col-span-1">
               <StackList></StackList>
             </div>
-
           </div>
         </section>
       </main>
-
+      <Footer></Footer>
     </>
   )
 }

@@ -6,11 +6,12 @@ type TechnologiesProps = {
     technologyPromise: Promise<Technology[]>;
 };
 
-const Technologies = ({ technologyPromise}: TechnologiesProps) => {
+const Technologies = ({ technologyPromise }: TechnologiesProps) => {
     const techs = use(technologyPromise)
     return (
         <div>
             <TechList techs={techs}></TechList>
+            
         </div>
     );
 };
