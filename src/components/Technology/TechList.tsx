@@ -10,7 +10,7 @@ type TechListProps = {
 const TechList = ({ techs, saved,handleSavedStack }: TechListProps) => {
 
     return (
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
 
             {techs.map((tech: Technology) => {
                const isSelected = saved.some((item) => item.id === tech.id);

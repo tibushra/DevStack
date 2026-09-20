@@ -29,9 +29,9 @@ function App() {
       <Banner></Banner>
       <MainLayout></MainLayout>
       <main>
-        <section className="container mx-auto my-20">
-          <div className="grid grid-cols-4 gap-5">
-            <div className="col-span-3">
+        <section className="container mx-auto my-10 px-4 md:my-20 md:px-0">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-4 md:gap-5">
+            <div className="col-span-1 md:col-span-3">
               <Suspense fallback={<div>Laoding...</div>}>
                 <Technologies technologyPromise={technologyPromise} saved={saved} setSaved = {setSaved} handleSavedStack={handleSavedStack}></Technologies>
               </Suspense>
