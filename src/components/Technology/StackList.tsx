@@ -7,7 +7,7 @@ type StackListProps = {
 };
 
 const StackList = ({ technologies, setSaved }: StackListProps) => {
-    const handleRemoveStack = (id: number) => {
+    const handleRemoveStack = (id: string) => {
         setSaved((prev) =>
             prev.filter((tech) => tech.id !== id)
         );
