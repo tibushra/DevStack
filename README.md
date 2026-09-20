@@ -1,32 +1,54 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+# Dev Stack Builder
 
-Currently, two official plugins are available:
+## Project Description
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Dev Stack Builder** is a React application that lets users browse development technologies and create a personalized technology stack by adding or removing technologies.
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* TypeScript
+* Vite
+* Tailwind CSS
+* React Toastify
+* JSON
 
-## Expanding the Oxlint configuration
+## Features
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+* Browse development technologies
+* Build a personalized technology stack
+* Add and remove technologies dynamically
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+---
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+# Questions & Answers
+
+### 1. What is JSX, and why is it used in React?
+
+JSX is a JavaScript syntax that allows us to write HTML-like code inside JavaScript. It makes React UI code easier to write and understand.
+
+### 2. What is the difference between props and state?
+
+**Props** are used to pass data from parent to child and are read-only. **State** is managed inside a component and can change over time.
+
+### 3. What does the `useState` hook do, and where did you use it?
+
+`useState` is used to manage component state. In this project, it is used to store the user's selected technologies.
+
+### 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
+
+`useEffect` handles side effects such as data fetching. It can be used to fetch and load the technology data from the JSON file when the component loads.
+
+### 5. Why does every item in a `.map()` list need a unique `key` prop?
+
+A unique `key` helps React identify each list item and efficiently update the UI when items change.
+
+### 6. What is conditional rendering?
+
+Conditional rendering means showing different UI elements based on a condition. For example, showing an empty message when no technology is selected.
+
+### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+
+A parent passes data to a child using **props**. A child can send data back using a **callback function passed through props**.
