@@ -15,8 +15,8 @@ const Navbar = () => {
                 </ul>
             </div>
             <div>
-                <button className="bg-[#FFFFFF] text-[#334155] px-6 py-2 rounded-3xl">Sign In</button>
-                <button className="bg-[#D91B7E] text-[#FFFFFF] px-6 py-2 rounded-3xl">Sign Up</button>
+                <button className="bg-[#FFFFFF] text-[#334155] px-6 py-2 rounded-3xl hover:scale-105">Sign In</button>
+                <button className="bg-[#D91B7E] text-[#FFFFFF] px-6 py-2 rounded-3xl hover:scale-105">Sign Up</button>
             </div>
         </div>
        <hr className="border-slate-200" />

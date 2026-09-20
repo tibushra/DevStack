@@ -1,7 +1,7 @@
 import Banner from "./components/shared/Banner"
 import Navbar from "./components/shared/Navbar"
 import MainLayout from "./components/Technology/MainLayout"
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import type { Technology } from "./types/technologyType";
 import StackList from "./components/Technology/StackList";
 import Technologies from "./components/Technology/Technologies";
@@ -18,6 +18,10 @@ const technologyPromise = fetchTechnology();
 
 
 function App() {
+  const [saved,setSaved]= useState<Technology[]>([])
+  const handleSavedStack = (technology :Technology) =>{
+       setSaved((prev) => [...prev, technology]);
+  }
 
   return (
     <>
@@ -29,11 +33,11 @@ function App() {
           <div className="grid grid-cols-4 gap-5">
             <div className="col-span-3">
               <Suspense fallback={<div>Laoding...</div>}>
-                <Technologies technologyPromise={technologyPromise}></Technologies>
+                <Technologies technologyPromise={technologyPromise} saved={saved} setSaved = {setSaved} handleSavedStack={handleSavedStack}></Technologies>
               </Suspense>
             </div>
             <div className="col-span-1">
-              <StackList></StackList>
+              <StackList technologies ={saved} setSaved = {setSaved}></StackList>
             </div>
           </div>
         </section>

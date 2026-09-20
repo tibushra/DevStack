@@ -4,13 +4,16 @@ import TechList from "./TechList";
 
 type TechnologiesProps = {
     technologyPromise: Promise<Technology[]>;
+    saved : Technology[];
+    setSaved: React.Dispatch<React.SetStateAction<Technology[]>>;
+    handleSavedStack : (techs :Technology) => void
 };
 
-const Technologies = ({ technologyPromise }: TechnologiesProps) => {
+const Technologies = ({ technologyPromise, saved, setSaved,handleSavedStack }: TechnologiesProps) => {
     const techs = use(technologyPromise)
     return (
         <div>
-            <TechList techs={techs}></TechList>
+            <TechList techs={techs} saved ={saved} setSaved = {setSaved} handleSavedStack={handleSavedStack}></TechList>
             
         </div>
     );

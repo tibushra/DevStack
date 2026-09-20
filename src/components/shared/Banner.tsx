@@ -13,10 +13,10 @@ const Banner = () => {
                     compare them side by side, and put together the stack that fits your <br />
                     next project.</p>
                 <div className="flex gap-2">
-                    <button className="rounded-lg bg-linear-to-r from-[#F97316] to-[#EC4899] px-5 py-3 font-semibold text-[#FFFFFF]">
+                    <button className="rounded-lg bg-linear-to-r from-[#F97316] to-[#EC4899] px-5 py-3 font-semibold text-[#FFFFFF] hover:scale-105">
                         Explore Technologies
                     </button>
-                    <button className="rounded-lg px-13 py-3 font-semibold text-[#374151] border border-slate-200" >Learn More</button>
+                    <button className="rounded-lg px-13 py-3 font-semibold text-[#374151] border border-slate-200 hover:scale-105" >Learn More</button>
                 </div>
             </div>
             <div><img className="h-155" src="../../../asset/banner-stack.png" alt="" /></div>
