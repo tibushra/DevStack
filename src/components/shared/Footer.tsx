@@ -1,4 +1,5 @@
 import { GoDotFill } from "react-icons/go";
+import logo from "../../../asset/logo-text.png"
 
 const Footer = () => {
     return (
@@ -7,7 +8,7 @@ const Footer = () => {
             <div className="container mx-auto max-w-7xl">
                 <div className="grid grid-cols-2 gap-8 py-12 md:flex md:justify-between md:items-center md:py-20">
                     <div className="grid justify-items-center gap-4 md:justify-items-start md:gap-5">
-                        <img src="../../../asset/logo-text.png" alt="DevStack logo" />
+                        <img src={logo} alt="DevStack logo" />
                         <p className="text-center md:text-left text-[#64748B]">Curated tools, technologies, and resources for developers building
                             modern software.</p>
                         <div className="flex gap-4 text-[#475569] font-semibold">
