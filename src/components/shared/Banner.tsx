@@ -1,6 +1,8 @@
+import banner from "../../../asset/banner-stack.png"
+
 const Banner = () => {
     return (
-        <div className="container mx-auto flex flex-col px-4 py-8 text-center md:flex-row md:justify-between items-center md:text-left ">
+        <div className="container mx-auto max-w-7xl flex flex-col px-4 py-8 text-center md:flex-row md:justify-between items-center md:text-left ">
             <div className="grid w-full gap-5 md:w-1/2 md:gap-9">
                 <h1 className="text-4xl font-bold leading-tight md:text-7xl">
                     Build Your Ideal
@@ -19,7 +21,7 @@ const Banner = () => {
                     <button className="rounded-lg px-13 py-3 font-semibold text-[#374151] border border-slate-200 hover:scale-105" >Learn More</button>
                 </div>
             </div>
-            <div><img className="h-64 md:h-155" src="../../../asset/banner-stack.png" alt="DevStack Banner" /></div>
+            <div><img className="h-64 md:h-155" src={banner} alt="DevStack Banner" /></div>
         </div>
     );
 };

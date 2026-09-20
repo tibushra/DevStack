@@ -12,7 +12,7 @@ type TechnologiesProps = {
 const Technologies = ({ technologyPromise, saved, setSaved,handleSavedStack }: TechnologiesProps) => {
     const techs = use(technologyPromise)
     return (
-        <div>
+        <div className="container mx-auto max-w-7xl">
             <TechList techs={techs} saved ={saved} setSaved = {setSaved} handleSavedStack={handleSavedStack}></TechList>
             
         </div>

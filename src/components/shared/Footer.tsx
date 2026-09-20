@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <div>
             <hr className="border-slate-200" />
-            <div className="container mx-auto">
+            <div className="container mx-auto max-w-7xl">
                 <div className="grid grid-cols-2 gap-8 py-12 md:flex md:justify-between md:items-center md:py-20">
                     <div className="grid justify-items-center gap-4 md:justify-items-start md:gap-5">
                         <img src="../../../asset/logo-text.png" alt="DevStack logo" />

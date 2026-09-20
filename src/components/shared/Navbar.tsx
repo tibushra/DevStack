@@ -1,11 +1,12 @@
 import { RxHamburgerMenu } from "react-icons/rx";
+import logo from "../../../asset/logo-text.png";
 
 const Navbar = () => {
     return (
         <>
-        <div className="container mx-auto flex justify-between items-center h-20">
+        <div className="container mx-auto max-w-7xl flex justify-between items-center h-20">
             <div className="md:hidden"><RxHamburgerMenu /></div>
-            <div><img src="../../../asset/logo-text.png" alt="logo" /></div>
+            <div><img src={logo} alt="logo" /></div>
             <div>
                 <ul className="hidden md:flex justify-between items-center gap-5">
                     <li className="text-[#DB2777]"><a href="home">Home</a></li>
